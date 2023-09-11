@@ -150,7 +150,7 @@ namespace Interceptor
         public static extern Int32 Receive(IntPtr context, Int32 device, ref Stroke stroke, UInt32 numStrokes);
 
         [DllImport("interception.dll", EntryPoint = "interception_get_hardware_id", CallingConvention = CallingConvention.Cdecl)]
-        public static extern Int32 GetHardwareId(IntPtr context, Int32 device, String hardwareIdentifier, UInt32 sizeOfString);
+        public static extern Int32 GetHardwareId(IntPtr context, Int32 device, IntPtr hardwareIdentifier, UInt32 sizeOfString);
 
         [DllImport("interception.dll", EntryPoint = "interception_is_invalid", CallingConvention = CallingConvention.Cdecl)]
         public static extern Int32 IsInvalid(Int32 device);
